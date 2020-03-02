@@ -13,12 +13,27 @@ function createGrid(gridSize){
     container.style.setProperty('grid-template-rows', `repeat(${gridSize}, 1fr)`);
   }
 
-  createGrid(50);
+function clearGrid(){
+    document.querySelectorAll(".tile").forEach(function(_e_) {
+        _e_.style.background = 'LightSalmon'; 
+            });
+    }
 
-  document.querySelectorAll(".tile").forEach(function(tile) {
-    tile.addEventListener('mouseenter', function(e){
-      e.target.style.background = 'LightSkyBlue';
-    });
-      });
+
+
+  const btn = document.querySelector('#btn');
+  btn.addEventListener('click', function(_e) {
+      clearGrid();
+      var gridSize = prompt("Enter the new grid size","");
+      createGrid(gridSize);
+      document.querySelectorAll(".tile").forEach(function(tile) {
+        tile.addEventListener('mouseenter', function(e){
+          e.target.style.background = 'LightSkyBlue';
+        });
+          });
+  });
+
+
+
   
   

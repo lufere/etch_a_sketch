@@ -14,3 +14,11 @@ function createGrid(gridSize){
   }
 
   createGrid(50);
+
+  document.querySelectorAll(".tile").forEach(function(tile) {
+    tile.addEventListener('mouseenter', function(e){
+      e.target.style.background = 'LightSkyBlue';
+    });
+      });
+  
+  

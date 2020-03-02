@@ -1,0 +1,10 @@
+#container {
+    font-size: 40px;
+    height:900px;
+    width:900px;
+    
+    background: LightGray;
+    display:grid;
+    //grid-template-columns: repeat(16, 1fr);
+    //grid-template-rows: repeat(16, 1fr);
+}
